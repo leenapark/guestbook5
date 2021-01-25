@@ -57,8 +57,10 @@ public class GuestDao {
 		passMap.put("no", no);
 		passMap.put("password", pass);
 		
-		int count = sqlSession.delete("guestbook.delete", passMap);
+		System.out.println(passMap.toString());
 		
+		int count = sqlSession.delete("guestbook.delete", passMap);
+				
 		return count;
 	}
 	
